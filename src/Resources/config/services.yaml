@@ -1,5 +1,6 @@
-imports:
-  - { resource: trans_manager.yaml }
+trans_manager:
+  key: 'test'
+  secret: 'secret key'
 
 services:
   trans_manager.type:
