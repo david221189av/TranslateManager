@@ -1,27 +1,26 @@
 {
-    "name": "terra/trans-manager",
-    "description": "Translate panel for symfony",
-    "type": "symfony-bundle",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Anatoly",
-            "email": "david221189av@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": "^7.1",
-        "symfony/framework-bundle": "^4.3 || ^5.0",
-        "symfony/validator": "^4.3 || ^5.0",
-        "symfony/translation": "^4.3 || ^5.0",
-        "symfony/twig-bundle": "^4.3 || ^5.0",
-        "symfony/finder": "^4.3 || ^5.0",
-        "symfony/intl": "^4.3 || ^5.0",
-        "twig/twig": "^2.11 || ^3.0"
-    },
-    "conflict": {
-        "symfony/config": "<3.4.31"
-    },
-
+  "name": "terra/trans-manager",
+  "description": "Translate panel for symfony",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Anatoly",
+      "email": "david221189av@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.1",
+    "symfony/framework-bundle": "^4.3 || ^5.0",
+    "symfony/validator": "^4.3 || ^5.0",
+    "symfony/translation": "^4.3 || ^5.0",
+    "symfony/twig-bundle": "^4.3 || ^5.0",
+    "symfony/finder": "^4.3 || ^5.0",
+    "symfony/intl": "^4.3 || ^5.0",
+    "twig/twig": "^2.11 || ^3.0"
+  },
+  "conflict": {
+    "symfony/config": "<3.4.31"
+  }
 }
