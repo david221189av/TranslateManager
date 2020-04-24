@@ -1,3 +1,4 @@
-trans_manager:
-  key: 'test'
-  secret: 'secret key'
+config:
+  trans_manager:
+    key: 'test'
+    secret: 'secret key'
