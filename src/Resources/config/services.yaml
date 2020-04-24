@@ -1,3 +1,6 @@
+imports:
+  - { resource: trans_manager.yaml }
+
 services:
   trans_manager.type:
     class: Terra\TransManagerBundle\Type\TransManagerSubmitType
