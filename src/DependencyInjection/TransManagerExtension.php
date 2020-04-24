@@ -28,5 +28,7 @@ class TransManagerExtension extends Extension {
         );
 
         $loader->load('services.yaml');
+
+        return $loader;
     }
 }
