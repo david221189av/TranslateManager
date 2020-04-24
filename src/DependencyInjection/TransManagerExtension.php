@@ -17,18 +17,16 @@ class TransManagerExtension extends Extension {
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+        $config = $this->processConfiguration(new Configuration(), $configs);
+
+        $container->setParameter('trans_manager.key', $config['key']);
+        $container->setParameter('trans_manager.secret', $config['secret']);
+
         $loader = new YamlFileLoader(
             $container,
             new FileLocator(__DIR__ . '/../Resources/config')
         );
 
-        $loader->load('trans_manager.yaml');
         $loader->load('services.yaml');
-
-        $configuration = new Configuration();
-        $config = $this->processConfiguration($configuration, $configs);
-
-        $container->setParameter('trans_manager.key', $config['key']);
-        $container->setParameter('trans_manager.secret', $config['secret']);
     }
 }

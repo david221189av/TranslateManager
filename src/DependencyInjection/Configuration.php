@@ -19,7 +19,6 @@ class Configuration implements ConfigurationInterface
             $treeBuilder = new TreeBuilder('trans_manager');
             $rootNode = $treeBuilder->getRootNode();
         } else {
-            // BC layer for symfony/config 4.1 and older
             $treeBuilder = new TreeBuilder();
             $rootNode = $treeBuilder->root('trans_manager');
         }
