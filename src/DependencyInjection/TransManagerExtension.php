@@ -22,7 +22,7 @@ class TransManagerExtension extends Extension {
             new FileLocator(__DIR__ . '/../Resources/config')
         );
 
-        $loader->load('trans_manager.yaml');
+//        $loader->load('trans_manager.yaml');
         $loader->load('services.yaml');
 
         $configuration = new Configuration();
