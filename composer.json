@@ -20,7 +20,5 @@
     "symfony/intl": "^4.3 || ^5.0",
     "twig/twig": "^2.11 || ^3.0"
   },
-  "conflict": {
-    "symfony/config": "<3.4.31"
-  }
+  "conflict": {}
 }
