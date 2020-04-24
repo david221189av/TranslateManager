@@ -20,11 +20,11 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->getRootNode();
         $rootNode
         ->children()
-        ->scalarNode('key')
+        ->scalarNode('trans_manager.key')
             ->defaultValue('some key')
         ->isRequired()->cannotBeEmpty()
         ->end()
-        ->scalarNode('secret')
+        ->scalarNode('trans_manager.secret')
             ->defaultValue('some secret key')
         ->isRequired()->cannotBeEmpty()
         ->end()
