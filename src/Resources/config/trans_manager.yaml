@@ -1,3 +1,2 @@
-trans_manager:
-  key: 'test'
-  secret: 'secret key'
+trans_manager.key: 'test'
+trans_manager.secret: 'secret key'

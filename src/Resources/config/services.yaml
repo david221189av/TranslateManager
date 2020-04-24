@@ -1,9 +1,4 @@
 services:
-  _default:
-    autowire: true
-    autoconfigure: true
-    public: false
-
   trans_manager.type:
     class: Terra\TransManagerBundle\Type\TransManagerSubmitType
     tags: ['form.type']

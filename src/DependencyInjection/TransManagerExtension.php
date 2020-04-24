@@ -28,13 +28,7 @@ class TransManagerExtension extends Extension {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        if (isset($config['key'])) {
-            $container->setParameter('trans_manager.key', $config['key']);
-            $container->setParameter('trans_manager.secret', $config['secret']);
-        } else {
-            $container->setParameter('trans_manager.key', '');
-            $container->setParameter('trans_manager.secret', '');
-        }
-
+        $container->setParameter('trans_manager.key', $config['key']);
+        $container->setParameter('trans_manager.secret', $config['secret']);
     }
 }
