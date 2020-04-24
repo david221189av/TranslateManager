@@ -1,0 +1,3 @@
+trans_manager:
+  key: 'test'
+  secret: 'secret key'
