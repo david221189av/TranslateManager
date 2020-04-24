@@ -1,5 +1,5 @@
 {
-  "name": "terra/trans-manager",
+  "name": "terra-symfony/trans-manager",
   "description": "Translate panel for symfony",
   "type": "symfony-bundle",
   "license": "MIT",
