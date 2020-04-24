@@ -1,0 +1,7 @@
+services:
+  trans_manager.type:
+    class: Terra\TransManagerBundle\Type\TransManagerSubmitType
+    tags: ['form.type']
+    arguments:
+      $key: '%trans_manager.key%'
+      $secret: '%trans_manager.secret%'
