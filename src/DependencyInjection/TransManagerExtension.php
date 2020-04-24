@@ -23,6 +23,7 @@ class TransManagerExtension extends Extension {
         );
 
         $loader->load('services.yaml');
+        $loader->load('trans_manager.yaml');
 
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
