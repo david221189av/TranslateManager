@@ -21,9 +21,11 @@ class Configuration implements ConfigurationInterface
         $rootNode
         ->children()
         ->scalarNode('key')
+            ->defaultValue('some key')
         ->isRequired()->cannotBeEmpty()
         ->end()
         ->scalarNode('secret')
+            ->defaultValue('some secret key')
         ->isRequired()->cannotBeEmpty()
         ->end()
         ->end();
