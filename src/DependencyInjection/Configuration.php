@@ -15,20 +15,23 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('trans_manager');
+        if (\method_exists(TreeBuilder::class, 'getRootNode')) {
+            $treeBuilder = new TreeBuilder('trans_manager');
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            // BC layer for symfony/config 4.1 and older
+            $treeBuilder = new TreeBuilder();
+            $rootNode = $treeBuilder->root('trans_manager');
+        }
 
-        $rootNode = $treeBuilder->getRootNode();
         $rootNode
-        ->children()
-        ->scalarNode('trans_manager.key')
-            ->defaultValue('some key')
-        ->isRequired()->cannotBeEmpty()
-        ->end()
-        ->scalarNode('trans_manager.secret')
-            ->defaultValue('some secret key')
-        ->isRequired()->cannotBeEmpty()
-        ->end()
-        ->end();
+            ->children()
+            ->scalarNode('key')->defaultValue('key value')->end()
+            ->end()
+            ->children()
+            ->scalarNode('secret')->defaultValue('secret value')->end()
+            ->end()
+        ;
 
         return $treeBuilder;
     }

@@ -1,2 +1,4 @@
-trans_manager.key: 'test'
-trans_manager.secret: 'secret key'
+parameters:
+  trans_manager:
+    key: 'dfdd'
+    secret: '32432'
