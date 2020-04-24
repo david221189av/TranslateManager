@@ -1,3 +1,7 @@
 trans_manager:
   key: '-'
   secret: '-'
+
+key: '- custom line'
+secret: '- secret line'
+
