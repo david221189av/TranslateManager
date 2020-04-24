@@ -5,7 +5,3 @@ services:
     arguments:
       $key: '%trans_manager.key%'
       $secret: '%trans_manager.secret%'
-
-trans_manager:
-  key: ''
-  secret: ''
