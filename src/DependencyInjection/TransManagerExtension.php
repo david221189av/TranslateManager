@@ -5,7 +5,7 @@ namespace Terra\TransManagerBundle\DependencyInjection;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\DependencyInjection\Loader;
 
 class TransManagerExtension extends Extension {
 
@@ -22,7 +22,7 @@ class TransManagerExtension extends Extension {
         $container->setParameter('trans_manager.key', $config['key']);
         $container->setParameter('trans_manager.secret', $config['secret']);
 
-        $loader = new YamlFileLoader(
+        $loader = new Loader\YamlFileLoader(
             $container,
             new FileLocator(__DIR__ . '/../Resources/config')
         );
