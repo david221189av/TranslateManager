@@ -32,8 +32,6 @@ return [
 ];
 ```
 
-2. Then, configure the bundle. An example configuration looks like this:
-
 ```yaml
 # config/packages/trans_manager_translation.yaml
 translation_manager:
@@ -55,11 +53,3 @@ trans_manager:
     site_key: 'APP_RECAPTCHA_SITE_KEY'
     secret: 'APP_RECAPTCHA_SECRET'
 ```
-
-
-## Documentation
-
-Read the full documentation at [http://php-translation.readthedocs.io](https://php-translation.readthedocs.io/en/latest/).
-
-
-[symfony_flex]: https://github.com/symfony/flex
