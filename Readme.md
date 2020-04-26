@@ -28,7 +28,7 @@ a few more simple steps.
 # config/bundles.php
 return [
     // ...
-    Translation\Bundle\TranslationBundle::class => ['all' => true],
+    Terra\TransManagerBundle\TransManagerBundle::class => ['all' => true],
 ];
 ```
 
@@ -39,6 +39,21 @@ return [
 trans_manager:
   site_key: '%env(APP_RECAPTCHA_SITE_KEY)%'
   secret: '%env(APP_RECAPTCHA_SECRET)%'
+```
+
+```yaml
+# config/packages/dev/trans_manager_services.yaml
+trans_manager_translation:
+    locales: ["en"]
+    edit_in_place:
+        enabled: false
+        config_name: app
+    configs:
+        app:
+            dirs: ["%kernel.project_dir%/templates", "%kernel.project_dir%/src"]
+            output_dir: "%kernel.project_dir%/translations"
+            excluded_names: ["*TestCase.php", "*Test.php"]
+            excluded_dirs: [cache, data, logs]
 ```
 
 3. And the last step, add new routes:
