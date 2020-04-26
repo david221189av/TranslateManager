@@ -3,6 +3,15 @@
         "Terra\\TransManagerBundle\\TransManagerBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
+        "config/packages/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd",
+        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "env": {
+        "APP_RECAPTCHA_SITE_KEY": "_RECAPTCHA_SITE_KEY",
+        "APP_RECAPTCHA_SECRET": "_RECAPTCHA_SECRET"
+    },
+    "gitignore": []
 }
