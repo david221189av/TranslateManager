@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Terra\\TransManagerBundle\\": "src/"
+      "Terra\\TransManagerBundle\\": ""
     }
   },
   "conflict": {}
