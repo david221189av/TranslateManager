@@ -35,15 +35,8 @@ return [
 2. Then, configure the bundle. An example configuration looks like this:
 
 ```yaml
-# config/packages/trans_manager.yaml
-trans_manager:
-  site_key: '%env(APP_RECAPTCHA_SITE_KEY)%'
-  secret: '%env(APP_RECAPTCHA_SECRET)%'
-```
-
-```yaml
-# config/packages/dev/trans_manager_services.yaml
-trans_manager_translation:
+# config/packages/trans_manager_translation.yaml
+translation_manager:
     locales: ["en"]
     edit_in_place:
         enabled: false
@@ -56,7 +49,13 @@ trans_manager_translation:
             excluded_dirs: [cache, data, logs]
 ```
 
-3. And the last step, add new routes:
+```yaml
+# config/packages/trans_manager.yaml
+trans_manager:
+    site_key: 'APP_RECAPTCHA_SITE_KEY'
+    secret: 'APP_RECAPTCHA_SECRET'
+```
+
 
 ## Documentation
 
